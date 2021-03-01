@@ -12,7 +12,7 @@ extension StoryboardLoadable where Self: UIViewController {
     }
 
     static func storyboardIdentifier() -> String {
-        return String(describing: Self.self)
+        return String(describing: Self.self).replacingOccurrences(of: "ViewController", with: "")
     }
 }
 
@@ -22,6 +22,6 @@ extension StoryboardLoadable where Self: UITableViewController {
     }
 
     static func storyboardIdentifier() -> String {
-        return String(describing: Self.self)
+        return String(describing: Self.self).replacingOccurrences(of: "TableViewController", with: "")
     }
 }
